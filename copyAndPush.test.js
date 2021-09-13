@@ -6,5 +6,13 @@ describe('copyAndPush', () => {
     const numWithPush = copyAndPush(numbers, 4);
     expect(numWithPush).toEqual([1, 2, 3, 4]);
   });
+
+  it('Makes sure that the original array is unchanged', () => {
+    const numbers = [1, 2, 3];
+    const numWithPush = copyAndPush(numbers, 100);
+    expect(numbers).toEqual([1, 2, 3]);
+    expect(numWithPush).toEqual([1, 2, 3, 100]);
+  });
+
 });
 
