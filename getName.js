@@ -1,5 +1,5 @@
 const getName = ({ name }) => {
-  return name;
+    return name;
 };
   
 export default getName;
